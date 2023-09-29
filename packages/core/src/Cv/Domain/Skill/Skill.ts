@@ -1,6 +1,6 @@
 import { AggregateRoot } from '../../../Shared/Domain/AggregateRoot';
 import { SkillCreatedDomainEvent, SkillCreatedDomainEventParams } from './SkillCreatedDomainEvent';
-import { Uuid } from '../../../Shared/Domain/ValueObject/Uuid';
+import { Uuid } from '../../../Shared/Domain/Uuid';
 import { SkillLevel } from './SkillLevel';
 import { SkillName } from './SkillName';
 

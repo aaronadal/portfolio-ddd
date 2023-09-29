@@ -1,4 +1,4 @@
-import { Uuid } from './Shared/Domain/ValueObject/Uuid';
+import { Uuid } from './Shared/Domain/Uuid';
 import { Skill } from './Cv/Domain/Skill/Skill';
 import { SkillName } from './Cv/Domain/Skill/SkillName';
 import { SkillLevel } from './Cv/Domain/Skill/SkillLevel';

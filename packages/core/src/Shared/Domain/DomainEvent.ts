@@ -1,4 +1,4 @@
-import { Uuid } from './ValueObject/Uuid';
+import { Uuid } from './Uuid';
 import { AtLeast } from './Type/AtLeast';
 
 export interface DomainEventParams {
