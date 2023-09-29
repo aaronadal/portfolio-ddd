@@ -1,5 +1,6 @@
-import express from 'express';
+import express, { Router } from 'express';
 import { Server as HttpServer } from 'http';
+import { registerRoutes } from './Route';
 
 export class Server {
     private readonly express: express.Express;
@@ -15,6 +16,11 @@ export class Server {
 
     constructor(private readonly port: number) {
         this.express = express();
+
+        const router = Router();
+        this.express.use(router);
+
+        registerRoutes(router);
     }
 
     async listen(): Promise<void> {

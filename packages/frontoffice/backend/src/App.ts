@@ -15,7 +15,7 @@ export class App {
     }
 
     async stop() {
-        if(this.server === null) {
+        if (this.server === null) {
             return Promise.resolve();
         }
 
