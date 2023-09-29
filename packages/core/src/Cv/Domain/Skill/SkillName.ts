@@ -1,3 +1,3 @@
-import { StringValueObject } from '../../../Shared/Domain/ValueObject/StringValueObject';
+import { NotEmptyStringValueObject } from '../../../Shared/Domain/ValueObject/NotEmptyStringValueObject';
 
-export class SkillName extends StringValueObject {}
+export class SkillName extends NotEmptyStringValueObject {}
