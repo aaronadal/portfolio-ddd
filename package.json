@@ -12,22 +12,27 @@
     "packages/**"
   ],
   "scripts": {
-    "lint": "prettier --write packages/**/*.ts{,x}",
-    "core:dev": "ts-node-dev --ignore-watch node_modules packages/core/src/index.ts",
-    "build": "tsc"
+    "prettier": "prettier --write packages/**/*.ts{,x}",
+    "test": "run-p test:core test:frontoffice-backend",
+    "test:core": "npm run test -w @portfolio-ddd/core",
+    "test:frontoffice-backend": "npm run test -w @portfolio-ddd/frontoffice-backend"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^9.5.1",
     "ts-node": "^10.8.1",
     "typescript": "^4.2.3"
   },
   "devDependencies": {
     "@types/express": "^4.17.18",
+    "@types/supertest": "^2.0.13",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
     "eslint": "^8.50.0",
     "jest": "^29.7.0",
     "lerna": "^7.3.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^3.0.3",
+    "supertest": "^6.3.3",
     "ts-node-dev": "^2.0.0"
   }
 }

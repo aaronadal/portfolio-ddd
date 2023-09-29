@@ -4,7 +4,10 @@
   "description": "",
   "scripts": {
     "dev": "ts-node-dev src/start.ts",
-    "start": "ts-node src/start.ts"
+    "start": "ts-node src/start.ts",
+    "test": "npm run test:unit && npm run test:features",
+    "test:unit": "jest --passWithNoTests",
+    "test:features": "cucumber-js"
   },
   "keywords": [],
   "author": {

@@ -2,7 +2,11 @@
   "name": "@portfolio-ddd/core",
   "version": "1.0.0",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "test": "npm run test:unit && npm run test:features",
+    "test:unit": "jest --passWithNoTests",
+    "test:features": "cucumber-js -p default"
+  },
   "keywords": [],
   "author": {
     "name": "Aarón Nadal",
