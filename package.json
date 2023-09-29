@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "lint": "prettier --write packages/**/*.ts{,x}",
-    "core:dev": "ts-node-dev --ignore-watch node_modules packages/core/index.ts",
+    "core:dev": "ts-node-dev --ignore-watch node_modules packages/core/src/index.ts",
     "build": "tsc"
   },
   "dependencies": {
