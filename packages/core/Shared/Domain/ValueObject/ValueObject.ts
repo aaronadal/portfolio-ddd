@@ -23,7 +23,7 @@ export abstract class ValueObject<T> {
     }
 
     toString(): string {
-        if(this.value && typeof this.value === 'object' && 'toString' in this.value) {
+        if (this.value && typeof this.value === 'object' && 'toString' in this.value) {
             return this.value.toString();
         }
 

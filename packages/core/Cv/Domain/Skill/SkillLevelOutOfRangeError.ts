@@ -1,5 +1,3 @@
-import {InvalidValueError} from "../../../Shared/Domain/ValueObject/InvalidValueError";
+import { InvalidValueError } from '../../../Shared/Domain/ValueObject/InvalidValueError';
 
-export class SkillLevelOutOfRangeError extends InvalidValueError {
-
-}
+export class SkillLevelOutOfRangeError extends InvalidValueError {}

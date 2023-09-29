@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "useDefineForClassFields": true,
+    "module": "NodeNext",
+    "lib": ["ES5"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+  },
+  "include": [
+    "packages/core/**/*.ts",
+    "packages/core/**/*.d.ts",
+    "packages/core/**/*.tsx",
+    "packages/core/**/*.vue"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

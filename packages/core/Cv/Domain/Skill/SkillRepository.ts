@@ -1,5 +1,5 @@
-import {Skill} from "./Skill";
-import {Criteria} from "../../../Shared/Domain/Criteria/Criteria";
+import { Skill } from './Skill';
+import { Criteria } from '../../../Shared/Domain/Criteria/Criteria';
 
 export interface SkillRepository {
     save(skill: Skill): Promise<void>;

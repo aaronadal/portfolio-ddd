@@ -1,0 +1,14 @@
+{
+  "name": "@portfolio-ddd/core",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": {
+    "name": "Aarón Nadal",
+    "email": "aaronadal.dev@gmail.com",
+    "url": "https://aaronadal.com"
+  },
+  "license": "MIT"
+}

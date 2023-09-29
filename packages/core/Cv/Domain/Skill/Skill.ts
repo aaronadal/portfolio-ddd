@@ -1,30 +1,24 @@
-import {AggregateRoot} from "../../../Shared/Domain/AggregateRoot";
-import {SkillCreatedDomainEvent, SkillCreatedDomainEventParams} from "./SkillCreatedDomainEvent";
-import {Uuid} from "../../../Shared/Domain/ValueObject/Uuid";
-import {SkillLevel} from "./SkillLevel";
-import {SkillName} from "./SkillName";
+import { AggregateRoot } from '../../../Shared/Domain/AggregateRoot';
+import { SkillCreatedDomainEvent, SkillCreatedDomainEventParams } from './SkillCreatedDomainEvent';
+import { Uuid } from '../../../Shared/Domain/ValueObject/Uuid';
+import { SkillLevel } from './SkillLevel';
+import { SkillName } from './SkillName';
 
 export class Skill extends AggregateRoot<SkillCreatedDomainEventParams> {
-    static create(
-        id: Uuid,
-        name: SkillName,
-        level: SkillLevel,
-    ): Skill {
-        const skill = this.load(id, name, level)
+    static create(id: Uuid, name: SkillName, level: SkillLevel): Skill {
+        const skill = this.load(id, name, level);
 
-        skill.record(SkillCreatedDomainEvent.create({
-            aggregateId: skill.id.value,
-        }))
+        skill.record(
+            SkillCreatedDomainEvent.create({
+                aggregateId: skill.id.value,
+            }),
+        );
 
         return skill;
     }
 
-    static load(
-        id: Uuid,
-        name: SkillName,
-        level: SkillLevel,
-    ): Skill {
-        return new this(id, name, level)
+    static load(id: Uuid, name: SkillName, level: SkillLevel): Skill {
+        return new this(id, name, level);
     }
 
     private constructor(

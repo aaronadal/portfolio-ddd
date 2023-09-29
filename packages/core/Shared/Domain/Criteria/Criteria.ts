@@ -1,3 +1,1 @@
-export class Criteria {
-    
-}
+export class Criteria {}

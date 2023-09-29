@@ -1,0 +1,4 @@
+services:
+  App:
+    class: ../App
+    arguments: []

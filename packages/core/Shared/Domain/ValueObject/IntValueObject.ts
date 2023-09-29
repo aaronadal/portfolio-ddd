@@ -1,5 +1,5 @@
-import {NumberValueObject} from "./NumberValueObject";
-import {InvalidValueError} from "./InvalidValueError";
+import { NumberValueObject } from './NumberValueObject';
+import { InvalidValueError } from './InvalidValueError';
 
 export class IntValueObject extends NumberValueObject {
     constructor(value: number) {
@@ -8,7 +8,7 @@ export class IntValueObject extends NumberValueObject {
     }
 
     private ensureValueIsInt(value: number) {
-        if(!Number.isInteger(value)) {
+        if (!Number.isInteger(value)) {
             throw new InvalidValueError('Value must be integer!');
         }
     }

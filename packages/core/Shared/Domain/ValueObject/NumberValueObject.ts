@@ -1,4 +1,3 @@
-import {PrimitiveValueObject} from "./PrimitiveValueObject";
+import { PrimitiveValueObject } from './PrimitiveValueObject';
 
-export class NumberValueObject extends PrimitiveValueObject<number> {
-}
+export class NumberValueObject extends PrimitiveValueObject<number> {}

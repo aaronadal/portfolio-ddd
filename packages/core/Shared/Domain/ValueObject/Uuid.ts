@@ -1,7 +1,7 @@
-import {uuidv7obj} from 'uuidv7';
-import {encode, valid} from 'uuid-base58';
-import {InvalidValueError} from './InvalidValueError';
-import {StringValueObject} from "./StringValueObject";
+import { uuidv7obj } from 'uuidv7';
+import { encode, valid } from 'uuid-base58';
+import { InvalidValueError } from './InvalidValueError';
+import { StringValueObject } from './StringValueObject';
 
 export class Uuid extends StringValueObject {
     static generate(): Uuid {

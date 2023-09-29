@@ -1,5 +1,5 @@
-import {Uuid} from './ValueObject/Uuid';
-import {AtLeast} from "./Type/AtLeast";
+import { Uuid } from './ValueObject/Uuid';
+import { AtLeast } from './Type/AtLeast';
 
 export interface DomainEventParams {
     id: string;
@@ -7,7 +7,7 @@ export interface DomainEventParams {
     launchedAt: Date;
 }
 
-export type DomainEventCreateParams<T extends DomainEventParams> = AtLeast<T, 'aggregateId'>
+export type DomainEventCreateParams<T extends DomainEventParams> = AtLeast<T, 'aggregateId'>;
 
 export abstract class DomainEvent<T extends DomainEventParams> {
     static readonly NAME: string;
@@ -18,9 +18,9 @@ export abstract class DomainEvent<T extends DomainEventParams> {
 
     protected constructor(
         protected readonly name: string,
-        params: AtLeast<T, 'aggregateId'>
+        params: AtLeast<T, 'aggregateId'>,
     ) {
-        const {id, aggregateId, launchedAt} = params;
+        const { id, aggregateId, launchedAt } = params;
 
         this.id = id || Uuid.generate().value;
         this.aggregateId = aggregateId;
