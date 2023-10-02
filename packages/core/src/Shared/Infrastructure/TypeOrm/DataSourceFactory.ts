@@ -1,10 +1,17 @@
 import { Config } from './Config';
 import { DataSource } from 'typeorm';
+import {ConfigFactory} from "./ConfigFactory";
 
 export class DataSourceFactory {
-    async create(config: Config) {
+    static async fromConfig() {
+        const config = ConfigFactory.create();
+
+        return this.create(config);
+    }
+
+    static async create(config: Config) {
         const dataSource = new DataSource({
-            type: 'postgres',
+            type: config.type,
             host: config.host,
             port: config.port,
             username: config.username,
