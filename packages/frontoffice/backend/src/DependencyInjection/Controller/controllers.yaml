@@ -1,0 +1,7 @@
+imports:
+  - { resource: ./skill.yaml }
+
+services:
+  app.controller.ping:
+    class: frontoffice/backend/src/Controller/PingController
+    arguments: []

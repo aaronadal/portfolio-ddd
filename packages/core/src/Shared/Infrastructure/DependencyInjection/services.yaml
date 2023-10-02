@@ -1,0 +1,12 @@
+services:
+  core.typeOrm.config:
+    factory:
+      class: core/src/Shared/Infrastructure/TypeOrm/ConfigFactory
+      method: 'create'
+
+  core.typeOrm.dataSource:
+    factory:
+      class: core/src/Shared/Infrastructure/TypeOrm/DataSourceFactory
+      method: 'create'
+    arguments:
+      - '@core.typeOrm.config'

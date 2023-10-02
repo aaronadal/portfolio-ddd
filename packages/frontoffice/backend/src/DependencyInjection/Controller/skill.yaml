@@ -1,0 +1,5 @@
+services:
+  app.controller.skill.list:
+    class: frontoffice/backend/src/Controller/Skill/ListController
+    arguments:
+      - '@core.cv.skill.repository'

@@ -1,7 +1,11 @@
-import { Router } from 'express';
-import { PingController } from '../Controller/PingController';
+import {Router} from 'express';
+import {container} from "../DependencyInjection";
+import {Controller} from "../Controller/Controller";
 
 export default (router: Router) => {
-    const controller = new PingController();
-    router.get('/ping', (req, res) => controller.run(req, res));
+    router.get('/ping', (request, response) => {
+        const controller = container.get<Controller>('app.controller.ping');
+
+        controller.run(request, response)
+    });
 };

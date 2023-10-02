@@ -1,3 +1,5 @@
 imports:
+  - { resource: ../../../../core/src/Shared/Infrastructure/DependencyInjection/services_development.yaml }
+  - { resource: ../../../../core/src/Cv/Infrastructure/DependencyInjection/services_development.yaml }
   - { resource: ./services.yaml }
 

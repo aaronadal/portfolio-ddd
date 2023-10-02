@@ -1,8 +1,10 @@
 import { ContainerBuilder, YamlFileLoader } from 'node-dependency-injection';
+import * as path from "path";
 
-export const container = new ContainerBuilder();
+const packagesDir = path.join(__dirname, '..', '..', '..', '..');
+export const container = new ContainerBuilder(false, packagesDir);
 
 const loader = new YamlFileLoader(container);
 const env = process.env.NODE_ENV || 'development';
 
-loader.load(`${__dirname}/services_${env}.yaml`);
+export const loadPromise = loader.load(`${__dirname}/services_${env}.yaml`);

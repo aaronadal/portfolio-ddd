@@ -1,6 +1,7 @@
 import express, { Router } from 'express';
 import { Server as HttpServer } from 'http';
 import { registerRoutes } from './Route';
+import {loadPromise} from "./DependencyInjection";
 
 export class Server {
     private readonly express: express.Express;
@@ -25,7 +26,8 @@ export class Server {
 
     async listen(): Promise<void> {
         return new Promise((resolve) => {
-            this._http = this.express.listen(this.port, () => {
+            this._http = this.express.listen(this.port, async () => {
+                await loadPromise;
                 this.showServerUpFeedback();
                 resolve();
             });

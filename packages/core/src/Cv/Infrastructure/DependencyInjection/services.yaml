@@ -1,0 +1,5 @@
+services:
+  core.cv.skill.repository:
+    class: core/src/Cv/Infrastructure/Skill/TypeOrmSkillRepository
+    arguments:
+      - '@core.typeOrm.dataSource'

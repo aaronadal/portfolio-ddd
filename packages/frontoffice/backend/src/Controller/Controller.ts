@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
 
 export interface Controller {
-    run(request: Request, response: Response): Promise<void>;
+    run(request: Request, response: Response): Promise<unknown>;
 }

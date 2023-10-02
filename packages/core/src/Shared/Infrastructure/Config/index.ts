@@ -47,6 +47,6 @@ const config = convict({
     },
 });
 
-config.loadFile([__dirname + '/' + config.get('env') + '.json']);
+config.loadFile([]);
 
 export default config;

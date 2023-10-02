@@ -1,4 +1,7 @@
+imports:
+  - { resource: ./Controller/controllers.yaml }
+
 services:
-  App:
-    class: ../App
+  app:
+    class: frontoffice/backend/src/App
     arguments: []

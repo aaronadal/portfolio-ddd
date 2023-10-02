@@ -1,13 +1,8 @@
-import { AggregateRoot } from '../../Domain/AggregateRoot';
-import {DataSource, EntityTarget} from "typeorm";
+import {DataSource} from "typeorm";
 
-export abstract class Repository<T extends AggregateRoot<any>> {
+export abstract class Repository {
     constructor(
-        private readonly dataSource: DataSource,
+        protected readonly dataSource: Promise<DataSource>,
     ) {
-    }
-
-    protected getRepo(target: EntityTarget<T>) {
-        return this.dataSource.getRepository(target);
     }
 }
